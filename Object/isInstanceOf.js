@@ -1,10 +1,9 @@
-import isNull from '../null/isNull'
-import isUndefined from '../undefined/isUndefined'
 import getPrototypeOf from './getPrototypeOf'
 import Object from './'
+import isObject from './isObject'
 
 export default function isInstanceOf (constructor, value) {
-  if (isNull(value) || isUndefined(value)) {
+  if (!isObject(value)) {
     return false
   }
 
