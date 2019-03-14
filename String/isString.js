@@ -1,5 +1,8 @@
+import getPrimitiveOf from '../Object/getPrimitiveOf'
 import getTypeOf from '../Object/getTypeOf'
 
-export default function isString (value) {
-  return getTypeOf(value) === 'string'
+const type = 'string'
+
+export function isString (value) {
+  return getTypeOf(value) === type || getPrimitiveOf(value) === type
 }

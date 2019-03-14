@@ -1,5 +1,10 @@
+import getPrimitiveOf from '../Object/getPrimitiveOf'
+import getTypeOf from '../Object/getTypeOf'
 import isNaN from './isNaN'
 
-export default function isNumber (value) {
-  return !isNaN(value)
+const type = 'number'
+
+export function isNumber (value) {
+  return !isNaN(value) &&
+    (getTypeOf(value) === type || getPrimitiveOf(value) === type)
 }

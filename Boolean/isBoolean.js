@@ -1,8 +1,8 @@
 import getPrimitiveOf from '../Object/getPrimitiveOf'
 import getTypeOf from '../Object/getTypeOf'
 
-const type = 'function'
+const type = 'boolean'
 
-export function isFunction (value) {
+export function isBoolean (value) {
   return getTypeOf(value) === type || getPrimitiveOf(value) === type
 }
