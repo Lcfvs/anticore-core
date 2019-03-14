@@ -7,6 +7,6 @@ function format (value) {
   return replace(toUpperCase(value), '-', '')
 }
 
-export function dashToCamel (value) {
+export default function dashToCamel (value) {
   return replace(value, pattern, format)
 }

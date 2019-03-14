@@ -4,7 +4,7 @@ import isNaN from './isNaN'
 
 const type = 'number'
 
-export function isNumber (value) {
+export default function isNumber (value) {
   return !isNaN(value) &&
     (getTypeOf(value) === type || getPrimitiveOf(value) === type)
 }

@@ -3,6 +3,6 @@ import getTypeOf from '../Object/getTypeOf'
 
 const type = 'string'
 
-export function isString (value) {
+export default function isString (value) {
   return getTypeOf(value) === type || getPrimitiveOf(value) === type
 }

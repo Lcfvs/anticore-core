@@ -3,6 +3,6 @@ import getTypeOf from '../Object/getTypeOf'
 
 const type = 'function'
 
-export function isFunction (value) {
+export default function isFunction (value) {
   return getTypeOf(value) === type || getPrimitiveOf(value) === type
 }

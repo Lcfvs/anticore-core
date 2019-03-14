@@ -3,6 +3,6 @@ import getTypeOf from '../Object/getTypeOf'
 
 const type = 'boolean'
 
-export function isBoolean (value) {
+export default function isBoolean (value) {
   return getTypeOf(value) === type || getPrimitiveOf(value) === type
 }
