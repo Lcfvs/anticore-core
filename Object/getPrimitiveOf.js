@@ -1,4 +1,4 @@
-import indexOf from '../Array/indexOf'
+import includes from '../Array/includes'
 import isNull from '../null/isNull'
 import toLowerCase from '../String/toLowerCase'
 import getPrototypeOf from './getPrototypeOf'
@@ -33,7 +33,7 @@ export default function getPrimitiveOf (value) {
 
   const constructor = prototype.constructor
 
-  if (indexOf(constructors, constructor) > -1) {
+  if (includes(constructors, constructor)) {
     return toLowerCase(constructor.name)
   }
 
