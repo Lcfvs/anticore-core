@@ -1,5 +1,4 @@
 import getPrototypeOf from './getPrototypeOf'
-import Object from './'
 import isObject from './isObject'
 
 export default function isInstanceOf (constructor, value) {
@@ -7,7 +6,7 @@ export default function isInstanceOf (constructor, value) {
     return false
   }
 
-  value = getPrototypeOf(Object(value))
+  value = getPrototypeOf(value)
 
   return value === constructor.prototype || isInstanceOf(constructor, value)
 }
