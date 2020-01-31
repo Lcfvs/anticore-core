@@ -1,5 +1,5 @@
-import apply from '../Function/apply'
-import global from '../global'
+import apply from '../Function/apply.js'
+import global from '../global/index.js'
 
 const window = global()
 const method = window.Array

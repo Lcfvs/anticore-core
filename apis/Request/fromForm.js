@@ -1,18 +1,32 @@
-import includes from '../../Array/includes'
-import curry from '../../Function/curry'
-import empty from '../../Object/empty'
-import toUpperCase from '../../String/toUpperCase'
-import coalesce from 'anticore-utils/coalesce'
-import FormData from '../FormData'
-import contentType, { urlEncoded } from '../Headers/contentType'
-import Url from '../URL'
-import toString from '../URL/toString'
-import concat from '../URL/Params/concat'
-import Request from './index'
-import init from './init'
+import indexOf from '../../Array/indexOf.js'
+import includes from '../../Array/includes.js'
+import shift from '../../Array/shift.js'
+import curry from '../../Function/curry.js'
+import empty from '../../Object/empty.js'
+import toUpperCase from '../../String/toUpperCase.js'
+import FormData from '../FormData/index.js'
+import contentType, { urlEncoded } from '../Headers/contentType.js'
+import Url from '../URL/index.js'
+import toString from '../URL/toString.js'
+import concat from '../URL/Params/concat.js'
+import Request from './index.js'
+import init from './init.js'
 
-const find = coalesce([null, undefined, ''])
-const isEmpty = curry(includes, ['GET', 'HEAD'])
+function match (invalids, ...values) {
+  const value = shift(values)
+
+  if (indexOf(invalids, value) === -1) {
+    return value
+  }
+
+  if (values.length) {
+    return match(invalids, ...values)
+  }
+}
+
+function coalesce (...invalids) {
+  return curry(match, invalids)
+}
 
 function action (form, hasBody) {
   const action = find(form.action, form.ownerDocument.location.href)
@@ -31,6 +45,9 @@ function action (form, hasBody) {
 function data (form, hasBody) {
   return hasBody ? new FormData(form) : null
 }
+
+const find = coalesce([null, undefined, ''])
+const isEmpty = curry(includes, ['GET', 'HEAD'])
 
 export default function fromForm (form, options) {
   const method = find(form.method, 'GET')

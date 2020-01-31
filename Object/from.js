@@ -1,5 +1,5 @@
-import assign from './assign'
-import create from './create'
+import assign from './assign.js'
+import create from './create.js'
 
 /**
  * Clones the prototype and assigns the extensions on it

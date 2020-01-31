@@ -1,4 +1,4 @@
-import init from './init'
+import init from './init.js'
 
 export default function contentType (headers, value) {
   return init(headers, 'Content-Type', value)

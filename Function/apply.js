@@ -1,5 +1,5 @@
-import call from './call'
-import prototype from './prototype'
+import call from './call.js'
+import prototype from './prototype.js'
 
 const method = prototype.apply
 

@@ -1,4 +1,4 @@
-import prototype from './prototype'
+import prototype from './prototype.js'
 
 const method = prototype.call.bind(prototype.call)
 

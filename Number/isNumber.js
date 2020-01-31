@@ -1,6 +1,6 @@
-import getPrimitiveOf from '../Object/getPrimitiveOf'
-import getTypeOf from '../Object/getTypeOf'
-import isNaN from './isNaN'
+import getPrimitiveOf from '../Object/getPrimitiveOf.js'
+import getTypeOf from '../Object/getTypeOf.js'
+import isNaN from './isNaN.js'
 
 const type = 'number'
 

@@ -1,5 +1,5 @@
-import has from './has'
-import set from './set'
+import has from './has.js'
+import set from './set.js'
 
 export default function init (headers, name, value) {
   if (!has(headers, name)) {

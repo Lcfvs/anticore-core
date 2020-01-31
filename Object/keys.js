@@ -1,4 +1,4 @@
-import global from '../global'
+import global from '../global/index.js'
 
 const window = global()
 const method = window.Object.keys

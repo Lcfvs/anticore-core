@@ -1,11 +1,11 @@
-import isArray from '../array/isArray'
-import shift from '../array/shift'
-import forEach from '../Map/forEach'
-import isNumber from '../number/isNumber'
-import empty from '../object/empty'
-import getPrototypeOf from '../object/getPrototypeOf'
-import replace from '../string/replace'
-import split from '../string/split'
+import isArray from '../array/isArray.js'
+import shift from '../array/shift.js'
+import forEach from '../Map/forEach.js'
+import isNumber from '../number/isNumber.js'
+import empty from '../object/empty.js'
+import getPrototypeOf from '../object/getPrototypeOf.js'
+import replace from '../string/replace.js'
+import split from '../string/split.js'
 
 function onKey (value, key) {
   define(this, 'target', value, split(replace(key, /]/g, ''), /[.[]/))

@@ -1,5 +1,5 @@
-import construct from '../../Function/construct'
-import global from '../../global'
+import construct from '../../Function/construct.js'
+import global from '../../global/index.js'
 
 const window = global()
 const method = window.Headers

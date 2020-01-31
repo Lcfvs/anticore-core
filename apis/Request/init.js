@@ -1,6 +1,6 @@
-import empty from '../../Object/empty'
-import Headers from '../Headers'
-import xhr from '../Headers/xhr'
+import empty from '../../Object/empty.js'
+import Headers from '../Headers/index.js'
+import xhr from '../Headers/xhr.js'
 
 export default function init (options) {
   const config = empty(options || empty())

@@ -1,5 +1,5 @@
-import global from '../global'
-import construct from '../Function/construct'
+import global from '../global/index.js'
+import construct from '../Function/construct.js'
 
 const window = global()
 const method = window.Map

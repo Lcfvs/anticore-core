@@ -1,5 +1,5 @@
-import getPrimitiveOf from '../Object/getPrimitiveOf'
-import getTypeOf from '../Object/getTypeOf'
+import getPrimitiveOf from '../Object/getPrimitiveOf.js'
+import getTypeOf from '../Object/getTypeOf.js'
 
 const type = 'string'
 
